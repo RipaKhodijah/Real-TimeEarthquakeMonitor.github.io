@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Earthquake Monitor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-control-geocoder/dist/Control.Geocoder.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Real-Time Earthquake Monitor</h1>
+    </header>
+    <main>
+        <section id="search-section">
+            <h2>Pencarian Lokasi Gempa</h2>
+            <input type="text" id="location-search" placeholder="Masukkan lokasi..." />
+            <button onclick="searchEarthquakes()">Cari Gempa</button>
+        </section>
+
+        <section id="map"></section>
+
+        <section id="content">
+            <h2>Informasi Gempa Terkini</h2>
+            <div>Loading data...</div>
+        </section>
+
+        <button id="enable-notifications" onclick="enableNotifications()">Aktifkan Notifikasi Gempa Baru</button>
+    </main>
+    <footer>
+        <p>Data dari <a href="https://earthquake.usgs.gov" target="_blank">USGS</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
